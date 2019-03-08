@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the paragraphs_browser_previewer module.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function paragraphs_browser_previewer_requirements($phase) {
+  $requirements = [];
+
+  if ($phase == 'install') {
+    if (!trait_exists('\Drupal\paragraphs_browser\Plugin\Field\FieldWidget\ParagraphsBrowserWidgetTrait')) {
+      $requirements['metatag_schema'] = [
+        'severity' => REQUIREMENT_ERROR,
+        'title' => 'Paragraphs Browser Previewer',
+        'value' => t('Impossible'),
+        'description' => t('Paragraphs Browser Previewer module requires to add <a href="@module">Patch</a> for module paragraphs_browser.', [
+          '@module' => 'https://www.drupal.org/files/issues/2018-03-22/paragraphs_browser-extend-from-ParagraphsWidget-2917656-10.patch',
+        ]),
+      ];
+    }
+  }
+
+  return $requirements;
+}

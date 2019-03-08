@@ -1,0 +1,114 @@
+react:
+  version: 16.6.3
+  js:
+    assets/vendor/react/react.production.min.js: { minified: true }
+react-dom:
+  version: 16.6.3
+  js:
+    assets/vendor/react-dom/react-dom.production.min.js: { minified: true }
+moment:
+  version: 2.22.2
+  js:
+    assets/vendor/moment/moment.min.js: { minified: true }
+gutenberg-js:
+  version: 4.0.0-rc.0
+  dependencies:
+    - gutenberg/react
+    - gutenberg/react-dom
+    - gutenberg/moment
+    - gutenberg/global
+  css:
+    base:
+      assets/vendor/gutenberg-js/css/style.css: {}
+      assets/vendor/gutenberg-js/css/block-library/style.css: {}
+  js:
+    assets/vendor/gutenberg-js/js/gutenberg-js.js: { minified: true }
+g-media-attributes:
+  version: 1.0.1
+  dependencies:
+    - gutenberg/gutenberg-js
+  js:
+    assets/vendor/g-media-attributes/index.js: { minified: true }
+global:
+  version: 1.0.0
+  js:
+    assets/vendor/regenerator-runtime/runtime.js: {}
+    js/global.js: {}
+editor:
+  version: 1.0.0
+  dependencies:
+    - core/drupal
+    - core/drupal.once
+    - core/drupal.ajax
+    - core/drupal.dialog
+    - core/drupal.dialog.ajax
+    - core/jquery
+    - core/jquery.form
+    - core/drupalSettings
+    - editor/drupal.editor
+    - gutenberg/gutenberg-js
+    - gutenberg/g-media-attributes
+    - gutenberg/admin
+  css:
+    theme:
+      css/editor.css: {}
+  js:
+    js/drupal-store.js: {}
+    js/components/drupal-icon.js: {}
+    js/components/drupal-block.js: {}
+    js/components/media-browser-details.js: {}
+    js/components/media-browser.js: {}
+    js/plugins/additional-fields.js: {}
+    js/drupal-blocks.js: {}
+    js/gutenberg.js: {}
+    js/filters/media-upload.js: {}
+# media-browser-modal:
+#   js:
+#     js/media-browser-modal.js: {}
+bartik:
+  version: 1.0.0
+  css:
+    theme:
+      css/bartik.css: {}
+
+frontend:
+  version: 1.0.0
+  css:
+    base:
+      assets/vendor/gutenberg-js/css/style.css: {}
+      assets/vendor/gutenberg-js/css/block-library/style.css: {}
+admin:
+  css:
+    base:
+      css/admin.css: {}
+  js:
+    js/admin.js: {}
+blocks-edit:
+  dependencies:
+    - gutenberg/editor
+  css:
+    base: {}
+  js: {}
+blocks-view:
+  css:
+    base: {}
+  js: {}
+
+# # Loading your block script and style files:
+# my-block:
+#   # With this dependency, this library will be loaded only when editing
+#   # with Gutenberg.
+#   dependencies:
+#     - gutenberg/editor
+#   js:
+#     path-to-my-js-file/myfile.js: {}
+#   css:
+#     theme:
+#       path-to-my-css-file/myfile.css: {}
+# # If any js or css to be loaded on frontend, just do it without dependencies.
+# my-block:
+#   js:
+#     path-to-my-js-file/myfile.js: {}
+#   css:
+#     theme:
+#       path-to-my-css-file/myfile.css: {}

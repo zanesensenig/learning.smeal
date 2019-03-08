@@ -1,0 +1,21 @@
+{
+  "name": "drupal-gutenberg",
+  "description": "Drupal is an open source content management platform powering millions of websites and applications.",
+  "license": "GPL-2.0",
+  "private": true,
+  "engines": {
+    "yarn": ">= 1.6",
+    "node": ">= 8.11"
+  },
+  "devDependencies": {
+    "drupal-js-build": "^1.1.0"
+  },
+  "dependencies": {
+    "@frontkom/g-media-attributes": "^1.0.1",
+    "@frontkom/gutenberg-js": "^4.0.0",
+    "moment": "^2.22.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "regenerator": "^0.13.3"
+  }
+}
